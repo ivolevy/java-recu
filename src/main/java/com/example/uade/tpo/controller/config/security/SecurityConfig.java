@@ -39,7 +39,8 @@ public class SecurityConfig {
                                                 "/api/order/**",
                                                 "/api/payment/**",
                                                 "/api/product/**",
-                                                "/api/discount/**"
+                                                "/api/discount/**",
+                                                "/api/contact/**"
                                         ).permitAll()
                                         .anyRequest().authenticated())
                                 .exceptionHandling(exc -> exc
