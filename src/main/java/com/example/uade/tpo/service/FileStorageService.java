@@ -23,7 +23,7 @@ public class FileStorageService {
 
     public void storeFileFromUrl(String fileUrl) {
         try {
-            // Descargar el archivo desde la URL remota
+            @SuppressWarnings("deprecation")
             URL url = new URL(fileUrl);
             String fileName = Paths.get(url.getPath()).getFileName().toString();
             Path targetLocation = this.fileStorageLocation.resolve(fileName);
