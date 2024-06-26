@@ -29,7 +29,6 @@ public class ContactController {
             return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
         }
 
-        // Procesar y almacenar imágenes desde URLs proporcionadas
         String[] fotos = contactForm.getFotos();
         if (fotos != null) {
             for (String fotoUrl : fotos) {
@@ -37,7 +36,6 @@ public class ContactController {
             }
         }
 
-        // Simular el procesamiento del formulario
         return ResponseEntity.ok("El problema ha sido registrado correctamente");
     }
 }
